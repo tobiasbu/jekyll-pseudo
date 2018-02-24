@@ -22,6 +22,11 @@ describe Grammar do
       format("If Then that").should eql ("sym(If) sym(Then) that")
     end
 
+    it "formats number" do
+      format("1234").should eql "num(1234)"
+      format("1234.1234").should eql "num(1234.1234)"
+    end
+
     it "formats comments" do
       format("oh #hi\n there").should eql "oh c(hi)\ni( )there"
     end
@@ -46,10 +51,10 @@ describe Grammar do
     end
 
     it 'formats objects functions' do
-      format('obj.fn(b,c)').should eql('variable(obj)op(.)fn(fn)op(()b,cop())')
-      format('obj.fn[b,c]').should eql('variable(obj)op(.)fn(fn)op([)b,cop(])')
-      format('obj.fn{b,c}').should eql('variable(obj)op(.)fn(fn)op({)b,cop(})')
-      format('ObjCapital.fn{b,c}').should eql('variable(ObjCapital)op(.)fn(fn)op({)b,cop(})')
+      format('obj.fn(b,c)').should eql('v(obj)op(.)fn(fn)op(()b,cop())')
+      format('obj.fn[b,c]').should eql('v(obj)op(.)fn(fn)op([)b,cop(])')
+      format('obj.fn{b,c}').should eql('v(obj)op(.)fn(fn)op({)b,cop(})')
+      format('ObjCapital.fn{b,c}').should eql('v(ObjCapital)op(.)fn(fn)op({)b,cop(})')
     end
 
     it 'strips leading whitespace' do

@@ -12,13 +12,16 @@ module Jekyll
       end
 
       def objfn(obj, fnc)
-        "variable(#{obj})op(.)fn(#{fnc})"
+        "v(#{obj})op(.)fn(#{fnc})"
       end
 
       def variable(txt)
-        "<span class='variable'>#{txt}</span>"
+        "v(#{txt})"
       end
 
+      def number(txt)
+        "num(#{txt})"
+      end
 
       def var(txt, sub)
         if sub

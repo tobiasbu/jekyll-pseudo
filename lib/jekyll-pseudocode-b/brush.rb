@@ -17,7 +17,7 @@ module Jekyll
       end
 
       # format a variable
-      def var(txt, sub)
+      def variable(txt, sub)
         raise 'not implemented'
       end
 
@@ -43,6 +43,10 @@ module Jekyll
 
       # render math symbols
       def math(txt)
+        raise 'not implemented'
+      end
+
+      def number(txt)
         raise 'not implemented'
       end
     end

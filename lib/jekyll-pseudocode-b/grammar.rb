@@ -9,12 +9,13 @@ module Jekyll
           [/\#(.*$)/, :comment],
           [/\/\/(.*$)/, :comment],
           [/(\w+)(?=[({\[])/, :fn],
-          [/\b([a-zA-Z0-9]*\w+)\.(\w+)(?=[({\[])/, :objfn],
+          [/\b([a-zA-Z0-9]*\w+)\.(\w+)(?=[({\[])/, :objfn], # obj calls funcion
           [/\b([A-Z]\w+)/, :sym],
           [/(\".*?\")/, :string],
           [/(<-|->|\+\+|<=|>=|--|!=|:=|==|<>|<->|<-->|<--|-->)/, :op],  # try these operators first
-          [/([-()\[\]{}=<>+*])/, :op],     # and these second
+          [/([-()\[\]{}=<>+*\/])/, :op],     # and these second
           [/(\$pi|\$tau)/, :math],
+          [/\b([0-9]*\.?[0-9]+)/, :number],
           [/\b([a-z][a-zA-Z0-9]*)(_[a-zA-Z0-9]+)?/, :var],
           [/^(\s+)/, :indent]
         ]

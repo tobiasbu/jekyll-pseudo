@@ -23,6 +23,10 @@ describe HtmlBrush do
       format("obj.fn()").should eql "<span class='variable'>obj</span><span class='operator'>.</span><span class='function'>fn</span><span class='operator'>(</span><span class='operator'>)</span>"
     end
 
+    it "numeric span" do
+      format("1234").should eql "<span class='numeric'>1234</span>"
+    end
+
     it "comment span" do
       format("# hi!").should eql "<span class='comment'>/* hi! */</span>"
     end

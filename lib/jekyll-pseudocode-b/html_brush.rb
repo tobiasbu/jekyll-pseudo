@@ -3,9 +3,21 @@ require 'jekyll-pseudocode-b/brush'
 module Jekyll
   module PseudoCodeB
     class HtmlBrush < Jekyll::PseudoCodeB::Brush
+
+      def is_numeric?(s)
+        begin
+          Float(s)
+        rescue
+          false # not numeric
+        else
+          true # numeric
+        end
+      end
+
       def sym(txt)
         "<span class='symbol'>#{txt}</span>"
       end
+
 
       def fn(txt)
         "<span class='function'>#{txt}</span>"
@@ -15,11 +27,19 @@ module Jekyll
         "<span class='variable'>#{obj}</span><span class='operator'>.</span><span class='function'>#{fnc}</span>"
       end
 
+      def number(txt)
+        "<span class='numeric'>#{txt}</span>"
+      end
+
       def var(txt, sub)
         if sub
           "<span class='variable'>#{txt}<sub>#{sub.slice(1,sub.size)}</sub></span>"
         else
-          "<span class='variable'>#{txt}</span>"
+          if (is_numeric?(txt))
+            "<span class='numeric'>#{txt}</span>"
+          else
+            "<span class='variable'>#{txt}</span>"
+          end
         end
       end
 
@@ -56,6 +76,8 @@ module Jekyll
         when '=' then '&#x3d;'
         when ':=' then '&#x2254;'
         when '+' then '&#x2b;'
+        when '-' then '-'
+        when '/' then '/'
         when '==' then '&#xff1d;'
         else txt
         end
