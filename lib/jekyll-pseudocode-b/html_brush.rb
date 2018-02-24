@@ -40,6 +40,10 @@ module Jekyll
         when '>=' then '&#x2265;'
         when '<-' then '&#x2190;'
         when '->' then '&#x2192;'
+        when '<--' then '&#x27f5;'
+        when '-->' then '&#x27f6;'
+        when '<->' then '&#x2194;'
+        when '<-->' then '&#x27f7;'
         when '*' then '&times;'
         when '[' then '&#65339;'
         when ']' then '&#65341;'
@@ -58,6 +62,7 @@ module Jekyll
       def math(txt)
         symbol = case txt
         when 'pi' then '&#x3C0;'
+        when 'tau' then '&#x1d6d5;'
         else txt
         end
         # FIXME: html conversion for some operators

@@ -10,7 +10,7 @@ module Jekyll
           [/\b([A-Z]\w+)/, :sym],
           [/(\w+)(?=[({\[])/, :fn],
           [/(\".*?\")/, :string],
-          [/(<-|->|\+\+|<=|>=|--|!=|:=|==|<>|<->|<-->)/, :op],  # try these operators first
+          [/(<-|->|\+\+|<=|>=|--|!=|:=|==|<>|<->|<-->|<--|-->)/, :op],  # try these operators first
           [/([-()\[\]{}=<>+*])/, :op],     # and these second
           [/(pi)/, :math]
           [/\b([a-z][a-zA-Z0-9]*)(_[a-zA-Z0-9]+)?/, :var],

@@ -21,15 +21,16 @@ _Comming soon..._
 * All other words are variables
 * Words within double quotes are generally strings
 
-## Syntax
+## Auto-Formatted Syntax
 
-These symbols are auto-formatted: `<- <= >= -> = == :=`. 
 The following table shows auto-formated symbols:
 
 | Syntax | Symbol   |
 | :------: | :--------: |
 | <-     | &#x2190; |
 | ->     | &#x2192; |
+| <--    | &#x27f5; |
+| -->    | &#x27f6; |
 | =>     | &#x2265; |
 | <=     | &#x2264; |
 | ==     | &#xff1d; |
@@ -42,6 +43,7 @@ The following table shows auto-formated symbols:
 | <->    | &#x2194; |
 | <-->   | &#x27f7; |
 | pi     | &#x3C0;  |
+| tau    | &#x1d6d5;  |
 
 ## Example
 
