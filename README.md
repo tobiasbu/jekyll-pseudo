@@ -19,13 +19,13 @@ gem install jekyll-pseudocode-b
 
 1. Add the following line to your site's `Gemfile`
 
-```
+```GemFile
 gem 'jekyll-pseudocode-b'
 ```
 
 2. And add the following line to your site plugin's `_config.yml`
 
-```
+```yml
 plugins:
   - jekyll-pseudocode-b
 ```
@@ -95,7 +95,7 @@ Output is annotated with `<span>` classes and can be styled using CSS. Typically
 
 With a bit of formatting, the above code becomes:
 
-![Image](https://raw.github.com/wkm/jekyll-pseudo/master/doc/samplecode.png)
+![Image](https://raw.github.com/wkm/jekyll-pseudo/master/doc/output_sample.png)
 
 ## More Styles
 
