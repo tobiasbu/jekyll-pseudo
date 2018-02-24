@@ -1,6 +1,6 @@
 require_relative '../lib/jekyll-pseudocode-b.rb'
 require_relative '../lib/jekyll-pseudocode-b/mock_brush.rb'
-#require 'spec_helper'
+require 'spec_helper'
 
 include Jekyll::PseudoCodeB
 
@@ -28,7 +28,7 @@ describe HtmlBrush do
     end
 
     it "operator converstions" do
-      format("<").should eql "<span class='op'>&#12296;</span>"
+      format("<").should eql "<span class='op'>&#65308;</span>"
       format("*").should eql "<span class='op'>&times;</span>"
     end
   end

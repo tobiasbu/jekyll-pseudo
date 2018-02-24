@@ -45,6 +45,12 @@ describe Grammar do
       format('fn{b,c}').should eql('fn(fn)op({)b,cop(})')
     end
 
+    it 'formats objects functions' do
+      format('obj.fn(b,c)').should eql('obj.fn(fn)op(()b,cop())')
+      format('obj.fn[b,c]').should eql('obj.fn(fn)op([)b,cop(])')
+      format('obj.fn{b,c}').should eql('obj.fn(fn)op({)b,cop(})')
+    end
+
     it 'strips leading whitespace' do
       format("\thi\n\tthere").should eql("hi\nthere")
       format("\thi\n\t\tthere").should eql("hi\ni(\t)there")

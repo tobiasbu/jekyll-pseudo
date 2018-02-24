@@ -34,15 +34,21 @@ module Jekyll
 
       def op(txt)
         symbol = case txt
-        when '<' then '&#12296;'
-        when '>' then '&#12297;'
-        when '<=' then '&le;'
-        when '>=' then '&ge;'
-        when '<-' then '&larr;'
-        when '->' then '&rarr;'
+        when '<' then '&#65308;'
+        when '>' then '&#65310;'
+        when '<=' then '&#x2264;'
+        when '>=' then '&#x2265;'
+        when '<-' then '&#x2190;'
+        when '->' then '&#x2192;'
         when '*' then '&times;'
         when '[' then '&#65339;'
         when ']' then '&#65341;'
+        when '!=' then '&#x2260;'
+        when '<>' then '&#x2260;'
+        when '=' then '&#x3d;'
+        when ':=' then '&#x2254;'
+        when '+' then '&plus'
+        when '==' then '&#xff1d;'
         else txt
         end
         # FIXME: html conversion for some operators
