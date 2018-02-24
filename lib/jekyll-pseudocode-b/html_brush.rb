@@ -47,12 +47,21 @@ module Jekyll
         when '<>' then '&#x2260;'
         when '=' then '&#x3d;'
         when ':=' then '&#x2254;'
-        when '+' then '&plus'
+        when '+' then '&#x2b;'
         when '==' then '&#xff1d;'
         else txt
         end
         # FIXME: html conversion for some operators
-        "<span class='op'>#{symbol}</span>"
+        "<span class='operator'>#{symbol}</span>"
+      end
+
+      def math(txt)
+        symbol = case txt
+        when 'pi' then '&#x3C0;'
+        else txt
+        end
+        # FIXME: html conversion for some operators
+        "<span class='math-symbol'>#{symbol}</span>"
       end
 
       def plain(txt)

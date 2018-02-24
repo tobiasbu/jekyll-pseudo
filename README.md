@@ -9,6 +9,42 @@ you use a gently styled free-formated representation.
 
 ## Usage:
 
+`gem 'jekyll-pseudocode-b'`
+
+_Comming soon..._
+
+## Language
+
+* Indentation is preserved
+* A word beginning with a capital letter is a keyword
+* A word followed by parentheses is a function name
+* All other words are variables
+* Words within double quotes are generally strings
+
+## Syntax
+
+These symbols are auto-formatted: `<- <= >= -> = == :=`. 
+The following table shows auto-formated symbols:
+
+| Syntax | Symbol   |
+| :------: | :--------: |
+| <-     | &#x2190; |
+| ->     | &#x2192; |
+| =>     | &#x2265; |
+| <=     | &#x2264; |
+| ==     | &#xff1d; |
+| :=     | &#x2254; |
+| =      | &#x3d;   |
+| <      | &#65308; |
+| >      | &#65310; |
+| [      | &#65339; |
+| ]      | &#65341; |
+| <->    | &#x2194; |
+| <-->   | &#x27f7; |
+| pi     | &#x3C0;  |
+
+## Example
+
     {% pseudocode %}
     Function swap(old, new)
       remaining <- quorumSize
@@ -28,17 +64,8 @@ you use a gently styled free-formated representation.
           send(host, cancel(old, new))
     {% endpseudocode %}
 
-## Language
+### Output
 
-* Indentation is preserved
-* A word beginning with a capital letter is a keyword
-* A word followed by parentheses is a function name
-* All other words are variables
-* Words within double quotes are generally strings
-
-* These symbols are auto-formatted: `<-- <= >= --> =`
-
-## Output
 Output is annotated with `<span>` classes and can be styled using CSS. Typically keywords are made bold and variables are italicized.
 
 With a bit of formatting, the above code becomes:
