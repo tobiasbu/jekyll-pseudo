@@ -2,20 +2,26 @@
 $:.push File.expand_path("../lib", __FILE__)
 require "jekyll-pseudocode-b/version"
 
-Gem::Specification.new do |s|
-  s.name        = "jekyll-pseudocode-b"
-  s.version     = Jekyll::Pseudo::VERSION
-  s.authors     = ["Tobias Ulrich", "Victor Bazterra", "Wiktor Macura"]
-  s.email       = ["tobiasbulrich@gmail.com","bazterra@gmail.com", "wmacura@gmail.com"]
-  s.homepage    = "http://github.com/wkm/jekyll-pseudo"
-  s.summary     = %q{A trivial jekyll plugin for formatting pseudocode}
-  s.description = %q{jekyll-pseudocode helps typeset pseudocode with minimal formatting}
+Gem::Specification.new do |spec|
+  spec.name        = "jekyll-pseudocode-b"
+  spec.version     = Jekyll::PseudoCodeB::VERSION
+  spec.authors     = ["Tobias Ulrich", "Victor Bazterra", "Wiktor Macura"]
+  spec.email       = ["tobiasbulrich@gmail.com","bazterra@gmail.com", "wmacura@gmail.com"]
+  spec.homepage    = "http://github.com/wkm/jekyll-pseudo"
+  spec.summary     = %q{A trivial jekyll plugin for formatting pseudocode}
+  spec.description = %q{jekyll-pseudocode helps typeset pseudocode with minimal formatting}
+  spec.licenses = ["MIT"]
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  spec.files         = `git ls-files`.split("\n")
+  spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  spec.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  s.add_runtime_dependency "jekyll"
+  spec.add_runtime_dependency "jekyll"
+
+
+  spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_development_dependency "rspec", "~> 3.5"
+  spec.add_development_dependency "rake"
 end

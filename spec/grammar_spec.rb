@@ -1,7 +1,8 @@
-require_relative '../lib/jekyll-pseudo.rb'
-require_relative '../lib/jekyll-pseudo/mock_brush.rb'
+require_relative '../lib/jekyll-pseudocode-b.rb'
+require_relative '../lib/jekyll-pseudocode-b/mock_brush.rb'
+require 'spec_helper'
 
-include Jekyll::PseudoCode
+include Jekyll::PseudoCodeB
 
 describe Grammar do
   def format(txt)

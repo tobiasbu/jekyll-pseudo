@@ -1,4 +1,4 @@
-require 'jekyll-pseudo/brush'
+require 'jekyll-pseudocode-b/brush'
 
 module Jekyll
   module PseudoCodeB
@@ -13,10 +13,8 @@ module Jekyll
 
       def var(txt, sub)
         if sub
-          "#{txt}<sub>#{sub.slice(1,sub.size)}</sub>"
           "<span class='variable'>#{txt}<sub>#{sub.slice(1,sub.size)}</sub></span>"
         else
-          "#{txt}"
           "<span class='variable'>#{txt}</span>"
         end
       end

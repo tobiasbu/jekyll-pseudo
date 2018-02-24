@@ -1,4 +1,4 @@
-require 'jekyll-pseudo/brush'
+require 'jekyll-pseudocode-b/brush'
 
 module Jekyll
   module PseudoCodeB

@@ -20,4 +20,4 @@ module Jekyll
 end
 
 
-Liquid::Template.register_tag('pseudocode', Jekyll::PseudoBlock)
+Liquid::Template.register_tag('pseudocode', Jekyll::PseudoCodeBlock)
