@@ -1,7 +1,7 @@
 # jekyll-pseudocode-b
 _A pseudocode/algorithm formatter for sites powered by Jekyll._
 
-This is a fork from **[wkm/jekyll-pseudo](https://github.com/wkm/jekyll-pseudo)**.
+This is a updated fork from **[wkm/jekyll-pseudo](https://github.com/wkm/jekyll-pseudo)**.
 
 Sometimes you don't want to use a particular programming language to
 demonstrate a concept because of the syntactic overhead. **jekyll-pseudocode-b** lets
@@ -9,7 +9,9 @@ you use a gently styled free-formated representation.
 
 ## Usage:
 
-`gem 'jekyll-pseudocode-b'`
+```
+gem 'jekyll-pseudocode-b'
+```
 
 _Comming soon..._
 
@@ -42,8 +44,8 @@ The following table shows auto-formated symbols:
 | ]      | &#65341; |
 | <->    | &#x2194; |
 | <-->   | &#x27f7; |
-| pi     | &#x3C0;  |
-| tau    | &#x1d6d5;  |
+| $pi     | &#x3C0;  |
+| $tau    | &#x1d6d5;  |
 
 ## Example
 

@@ -16,7 +16,11 @@ describe HtmlBrush do
     end
 
     it "fn span" do
-      format("fn()").should eql "<span class='function'>fn</span><span class='op'>(</span><span class='op'>)</span>"
+      format("fn()").should eql "<span class='function'>fn</span><span class='operator'>(</span><span class='operator'>)</span>"
+    end
+
+    it "obj fn span" do
+      format("obj.fn()").should eql "<span class='variable'>obj</span><span class='operator'>.</span><span class='function'>fn</span><span class='operator'>(</span><span class='operator'>)</span>"
     end
 
     it "comment span" do
@@ -28,8 +32,8 @@ describe HtmlBrush do
     end
 
     it "operator converstions" do
-      format("<").should eql "<span class='op'>&#65308;</span>"
-      format("*").should eql "<span class='op'>&times;</span>"
+      format("<").should eql "<span class='operator'>&#65308;</span>"
+      format("*").should eql "<span class='operator'>&times;</span>"
     end
   end
 end

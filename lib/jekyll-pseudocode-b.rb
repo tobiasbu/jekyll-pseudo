@@ -4,11 +4,11 @@ require 'jekyll-pseudocode-b/grammar'
 require 'jekyll-pseudocode-b/html_brush'
 
 module Jekyll
-  class PseudoCodeBlock < Liquid::Block
+  class PseudoCodeBlockB < Liquid::Block
     def initialize(tag_name, text, tokens)
       super
-      @brush = Pseudo::HtmlBrush.new
-      @grammar = Pseudo::Grammar.new
+      @brush = PseudoCodeB::HtmlBrush.new
+      @grammar = PseudoCodeB::Grammar.new
     end
 
     def render(context)
@@ -20,4 +20,4 @@ module Jekyll
 end
 
 
-Liquid::Template.register_tag('pseudocode', Jekyll::PseudoCodeBlock)
+Liquid::Template.register_tag('pseudocode', Jekyll::PseudoCodeBlockB)

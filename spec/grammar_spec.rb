@@ -46,9 +46,10 @@ describe Grammar do
     end
 
     it 'formats objects functions' do
-      format('obj.fn(b,c)').should eql('obj.fn(fn)op(()b,cop())')
-      format('obj.fn[b,c]').should eql('obj.fn(fn)op([)b,cop(])')
-      format('obj.fn{b,c}').should eql('obj.fn(fn)op({)b,cop(})')
+      format('obj.fn(b,c)').should eql('variable(obj)op(.)fn(fn)op(()b,cop())')
+      format('obj.fn[b,c]').should eql('variable(obj)op(.)fn(fn)op([)b,cop(])')
+      format('obj.fn{b,c}').should eql('variable(obj)op(.)fn(fn)op({)b,cop(})')
+      format('ObjCapital.fn{b,c}').should eql('variable(ObjCapital)op(.)fn(fn)op({)b,cop(})')
     end
 
     it 'strips leading whitespace' do

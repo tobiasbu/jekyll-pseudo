@@ -11,6 +11,15 @@ module Jekyll
         "fn(#{txt})"
       end
 
+      def objfn(obj, fnc)
+        "variable(#{obj})op(.)fn(#{fnc})"
+      end
+
+      def variable(txt)
+        "<span class='variable'>#{txt}</span>"
+      end
+
+
       def var(txt, sub)
         if sub
           "#{txt}sub(#{sub.slice(1,sub.size)})"
@@ -33,6 +42,10 @@ module Jekyll
 
       def indent(txt)
         "i(#{txt})"
+      end
+
+      def math(txt)
+        "math(#{txt})"
       end
 
       def plain(txt)

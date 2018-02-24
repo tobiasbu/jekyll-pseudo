@@ -7,12 +7,14 @@ module Jekyll
 
         mappings = [
           [/\#(.*$)/, :comment],
-          [/\b([A-Z]\w+)/, :sym],
+          [/\/\/(.*$)/, :comment],
           [/(\w+)(?=[({\[])/, :fn],
+          [/\b([a-zA-Z0-9]*\w+)\.(\w+)(?=[({\[])/, :objfn],
+          [/\b([A-Z]\w+)/, :sym],
           [/(\".*?\")/, :string],
           [/(<-|->|\+\+|<=|>=|--|!=|:=|==|<>|<->|<-->|<--|-->)/, :op],  # try these operators first
           [/([-()\[\]{}=<>+*])/, :op],     # and these second
-          [/(pi)/, :math]
+          [/(\$pi|\$tau)/, :math],
           [/\b([a-z][a-zA-Z0-9]*)(_[a-zA-Z0-9]+)?/, :var],
           [/^(\s+)/, :indent]
         ]

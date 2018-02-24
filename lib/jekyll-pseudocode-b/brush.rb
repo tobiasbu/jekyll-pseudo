@@ -11,6 +11,11 @@ module Jekyll
         raise 'not implemented'
       end
 
+      # format a object call function
+      def objfn(txt)
+        raise 'not implemented'
+      end
+
       # format a variable
       def var(txt, sub)
         raise 'not implemented'
@@ -33,6 +38,11 @@ module Jekyll
 
       # render plain text
       def plain(txt)
+        raise 'not implemented'
+      end
+
+      # render math symbols
+      def math(txt)
         raise 'not implemented'
       end
     end

@@ -11,6 +11,10 @@ module Jekyll
         "<span class='function'>#{txt}</span>"
       end
 
+      def objfn(obj, fnc)
+        "<span class='variable'>#{obj}</span><span class='operator'>.</span><span class='function'>#{fnc}</span>"
+      end
+
       def var(txt, sub)
         if sub
           "<span class='variable'>#{txt}<sub>#{sub.slice(1,sub.size)}</sub></span>"
@@ -61,8 +65,8 @@ module Jekyll
 
       def math(txt)
         symbol = case txt
-        when 'pi' then '&#x3C0;'
-        when 'tau' then '&#x1d6d5;'
+        when '$pi' then '&#x3C0;'
+        when '$tau' then '&#x1d6d5;'
         else txt
         end
         # FIXME: html conversion for some operators
