@@ -95,9 +95,13 @@ Output is annotated with `<span>` classes and can be styled using CSS. Typically
 
 With a bit of formatting, the above code becomes:
 
-![Image](https://raw.github.com/wkm/jekyll-pseudo/master/doc/output_sample.png)
+![Image](https://raw.githubusercontent.com/tobiasbu/jekyll-pseudo/master/doc/output-sample.png)
 
 ## More Styles
+
+You can also create you own stylesheets for yours codes like images below. Check on the `css` folder for CSS files examples.
+
+_Comming soon_
 
 ## Author
 
