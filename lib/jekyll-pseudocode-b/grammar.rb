@@ -1,5 +1,5 @@
 module Jekyll
-  module Pseudo
+  module PseudoCodeB
     class Grammar
       # parse a block of text, using the given brush to format output (works in a single pass)
       def format(txt, brush)
@@ -10,7 +10,7 @@ module Jekyll
           [/\b([A-Z]\w+)/, :sym],
           [/(\w+)(?=[({\[])/, :fn],
           [/(\".*?\")/, :string],
-          [/(<-|->|\+\+|<=|>=|--)/, :op],  # try these operators first
+          [/(<-|->|\+\+|<=|>=|--|!=|:=|mod)/, :op],  # try these operators first
           [/([-()\[\]{}=<>+*])/, :op],     # and these second
           [/\b([a-z][a-zA-Z0-9]*)(_[a-zA-Z0-9]+)?/, :var],
           [/^(\s+)/, :indent]

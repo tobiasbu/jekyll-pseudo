@@ -24,7 +24,7 @@ describe HtmlBrush do
     end
 
     it "variable span" do
-      format("a_b").should eql "a<sub>b</sub>"
+      format("a_b").should eql "<span class='variable'>a<sub>b</sub></span>"
     end
 
     it "operator converstions" do

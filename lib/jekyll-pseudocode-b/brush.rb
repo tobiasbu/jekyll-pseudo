@@ -1,5 +1,5 @@
 module Jekyll
-  module Pseudo
+  module PseudoCodeB
     class Brush
       # format a symbol
       def sym(txt)

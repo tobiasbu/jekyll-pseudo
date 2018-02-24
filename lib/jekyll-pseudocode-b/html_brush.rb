@@ -1,8 +1,8 @@
 require 'jekyll-pseudo/brush'
 
 module Jekyll
-  module Pseudo
-    class HtmlBrush < Jekyll::Pseudo::Brush
+  module PseudoCodeB
+    class HtmlBrush < Jekyll::PseudoCodeB::Brush
       def sym(txt)
         "<span class='symbol'>#{txt}</span>"
       end
@@ -14,8 +14,10 @@ module Jekyll
       def var(txt, sub)
         if sub
           "#{txt}<sub>#{sub.slice(1,sub.size)}</sub>"
+          "<span class='variable'>#{txt}<sub>#{sub.slice(1,sub.size)}</sub></span>"
         else
           "#{txt}"
+          "<span class='variable'>#{txt}</span>"
         end
       end
 
@@ -50,7 +52,7 @@ module Jekyll
       end
 
       def plain(txt)
-        txt
+        "#{txt}"
       end
     end
   end
