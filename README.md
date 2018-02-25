@@ -46,30 +46,6 @@ gems:
 * Words within double quotes are generally strings
 * Variables that calls a function can reproduce the following output: `myVar.FUNCTION(a);`
 
-## Auto-Formatted Syntax
-
-The following table shows auto-formated symbols:
-
-| Syntax | Symbol   |
-| :------: | :--------: |
-| <-     | &#x2190; |
-| ->     | &#x2192; |
-| <--    | &#x27f5; |
-| -->    | &#x27f6; |
-| =>     | &#x2265; |
-| <=     | &#x2264; |
-| ==     | &#xff1d; |
-| :=     | &#x2254; |
-| =      | &#x3d;   |
-| <      | &#65308; |
-| >      | &#65310; |
-| [      | &#65339; |
-| ]      | &#65341; |
-| <->    | &#x2194; |
-| <-->   | &#x27f7; |
-| $pi     | &#x3C0;  |
-| $tau    | &#x1d6d5;  |
-
 ## Output
 
 Output is annotated with `<span>` classes and can be styled using CSS. Typically keywords are made bold and variables are italicized. Using the following code lines:
@@ -97,11 +73,37 @@ With a bit of formatting, the above code becomes:
 
 ![Image](https://raw.githubusercontent.com/tobiasbu/jekyll-pseudo/master/doc/output-sample.png)
 
+## Auto-Formatted Syntax
+
+The following table shows auto-formated symbols:
+
+| Syntax | Symbol   |
+| :------: | :--------: |
+| <-     | &#x2190; |
+| ->     | &#x2192; |
+| <--    | &#x27f5; |
+| -->    | &#x27f6; |
+| =>     | &#x2265; |
+| <=     | &#x2264; |
+| ==     | &#xff1d; |
+| :=     | &#x2254; |
+| =      | &#x3d;   |
+| <      | &#65308; |
+| >      | &#65310; |
+| [      | &#65339; |
+| ]      | &#65341; |
+| <->    | &#x2194; |
+| <-->   | &#x27f7; |
+| $pi     | &#x3C0;  |
+| $tau    | &#x1d6d5;  |
+
 ## More Styles
 
-You can also create you own stylesheets for yours codes like images below. Check on the `css` folder for CSS files examples.
+You can also create your own CSS style for pseudo-codes like the images below. Check on the `css` folder for CSS files examples.
 
-_Comming soon_
+![Sample 0](https://raw.githubusercontent.com/tobiasbu/jekyll-pseudo/master/doc/output-sample-0.png)
+
+![Sample 1](https://raw.githubusercontent.com/tobiasbu/jekyll-pseudo/master/doc/output-sample-1.png)
 
 ## Author
 

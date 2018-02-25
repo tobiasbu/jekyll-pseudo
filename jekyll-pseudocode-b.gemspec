@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version     = Jekyll::PseudoCodeB::VERSION
   spec.authors     = ["Tobias Ulrich", "Victor Bazterra", "Wiktor Macura"]
   spec.email       = ["tobiasbulrich@gmail.com","bazterra@gmail.com", "wmacura@gmail.com"]
-  spec.homepage    = "http://github.com/wkm/jekyll-pseudo"
+  spec.homepage    = "http://github.com/tobiasbu/jekyll-pseudocode-b"
   spec.summary     = %q{A trivial jekyll plugin for formatting pseudocode}
   spec.description = %q{jekyll-pseudocode helps typeset pseudocode with minimal formatting}
   spec.licenses = ["MIT"]

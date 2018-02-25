@@ -1,0 +1,38 @@
+.pseudocode {
+    text-indent: 17px;
+    font-family: "Consolas", Courier, monospace;
+    font-size: 17px;
+    white-space: pre-wrap;
+    padding: 0.85em;
+    display: block;
+    line-height: 1.3em;
+    border-radius: 4px;
+    margin: 1.5em 0;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: #d7d7d7 1px solid
+}
+
+.indent
+{
+    
+}
+
+.symbol {
+font-weight: bold;
+text-transform: lowercase;
+}
+
+.function {
+text-transform: uppercase;
+}
+
+.variable {
+font-style: italic;
+}
+
+.numeric
+{
+
+}
