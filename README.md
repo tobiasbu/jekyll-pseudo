@@ -13,13 +13,13 @@ you use a gently styled free-formated representation.
 
 0. Install the `gem`
 
-```
+```ruby
 gem install jekyll-pseudocode-b
 ```
 
 1. Add the following line to your site's `Gemfile`
 
-```GemFile
+```ruby
 gem 'jekyll-pseudocode-b'
 ```
 
