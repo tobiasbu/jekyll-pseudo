@@ -31,6 +31,14 @@ module Jekyll
         "<span class='numeric'>#{txt}</span>"
       end
 
+      def special(txt, sub)
+        if sub
+          "<span class='special'>#{txt}<sub>#{sub.slice(1,sub.size)}</sub></span>"
+        else
+          "<span class='special'>#{txt}</span>"
+        end
+      end
+
       def var(txt, sub)
         if sub
           "<span class='variable'>#{txt}<sub>#{sub.slice(1,sub.size)}</sub></span>"
@@ -87,8 +95,9 @@ module Jekyll
 
       def math(txt)
         symbol = case txt
-        when '$pi' then '&#x3C0;'
-        when '$tau' then '&#x1d6d5;'
+        when 'pi' then '&#x3C0;'
+        when 'tau' then '&#x1d6d5;'
+        when 'infinity' then '&#x221e;'
         else txt
         end
         # FIXME: html conversion for some operators

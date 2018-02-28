@@ -40,11 +40,12 @@ gems:
 ## Language
 
 * Indentation is preserved
-* A word beginning with a capital letter is a keyword
+* A word beginning with a **capital letter** is a keyword
 * A word followed by parentheses is a function name
 * All other words are variables
-* Words within double quotes are generally strings
+* Words within double or single quotes are generally strings
 * Variables that calls a function can reproduce the following output: `myVar.FUNCTION(a);`
+* A word that starts with `@` will be
 
 ## Output
 
@@ -96,6 +97,7 @@ The following table shows auto-formated symbols:
 | <-->   | &#x27f7; |
 | $pi     | &#x3C0;  |
 | $tau    | &#x1d6d5;  |
+| $infinity    | &#x221e;  |
 
 ## More Styles
 

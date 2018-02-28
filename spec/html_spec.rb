@@ -39,5 +39,15 @@ describe HtmlBrush do
       format("<").should eql "<span class='operator'>&#65308;</span>"
       format("*").should eql "<span class='operator'>&times;</span>"
     end
+
+    it "math symbols" do
+      format("$pi").should eql "<span class='math-symbol'>&#x3C0;</span>"
+      format("$infinity").should eql "<span class='math-symbol'>&#x221e;</span>"
+    end
+
+    it "special vars" do
+      format("@null").should eql "<span class='special'>null</span>"
+      format("@special").should eql "<span class='special'>special</span>"
+    end
   end
 end

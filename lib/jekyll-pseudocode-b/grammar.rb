@@ -14,8 +14,9 @@ module Jekyll
           [/(\".*?\")/, :string],
           [/(<-|->|\+\+|<=|>=|--|!=|:=|==|<>|<->|<-->|<--|-->)/, :op],  # try these operators first
           [/([-()\[\]{}=<>+*\/])/, :op],     # and these second
-          [/(\$pi|\$tau)/, :math],
+          [/\$(pi|tau|infinity)/, :math],
           [/\b([0-9]*\.?[0-9]+)/, :number],
+          [/\@([a-zA-Z0-9]*)(_[a-zA-Z0-9]+)?/, :special],
           [/\b([a-z][a-zA-Z0-9]*)(_[a-zA-Z0-9]+)?/, :var],
           [/^(\s+)/, :indent]
         ]

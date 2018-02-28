@@ -17,7 +17,12 @@ module Jekyll
       end
 
       # format a variable
-      def variable(txt, sub)
+      def var(txt, sub)
+        raise 'not implemented'
+      end
+
+      # format a special variable
+      def special(txt, sub)
         raise 'not implemented'
       end
 
