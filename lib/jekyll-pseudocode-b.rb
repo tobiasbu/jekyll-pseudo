@@ -26,7 +26,7 @@ module Jekyll
       @text = super
 
       # for some reason is adding a line to initial code
-      # let's removes
+      # let's remove
       @text = @text.remove_lines(1)
 
       @formatted = @grammar.format(@text, @brush)

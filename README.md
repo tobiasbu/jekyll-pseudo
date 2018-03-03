@@ -13,13 +13,13 @@ you use a gently styled free-formated representation.
 
 0. Install the `gem`
 
-```ruby
+```
 gem install jekyll-pseudocode-b
 ```
 
 1. Add the following line to your site's `Gemfile`
 
-```ruby
+```GemFile
 gem 'jekyll-pseudocode-b'
 ```
 
@@ -40,12 +40,12 @@ gems:
 ## Language
 
 * Indentation is preserved
-* A word beginning with a **capital letter** is a keyword
+* A word beginning with a capital letter is a keyword
 * A word followed by parentheses is a function name
 * All other words are variables
 * Words within double or single quotes are generally strings
 * Variables that calls a function can reproduce the following output: `myVar.FUNCTION(a);`
-* A word that starts with `@` will be
+* A word that starts with `@` will be marked as 'special'. This is if you want to highlight a variable.
 
 ## Output
 
